@@ -13,29 +13,35 @@
 </head>
 <body>
     <div class="container-fluid">
-        <h1 class="mt-5 text-center">CloneElement</h1>
-        <div class="mb-5">
-            <button type="button" class="btn btn-info" id="AddList">AddList</button>
-        </div>
-        <div id="form">
-            <div class="clone-form mb-5">
-                <form>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control validation-input String" name="name[]" id="name" placeholder="Name">
-                            <span class="help-box">กรุณากรอกชื่อ</span>
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control validation-input Number" name="age[]" id="age" placeholder="Age">
-                            <span class="help-box">กรุณากรอกอายุ</span>
-                        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <h1 class="mt-5 text-center">CloneElement</h1>
+                <div class="mb-5">
+                    <button type="button" class="btn btn-info" id="AddList">AddList</button>
+                </div>
+                <div id="form">
+                    <div class="clone-form mb-5">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control validation-input String" name="name[]" id="name" placeholder="Name">
+                                    <span class="help-box">กรุณากรอกชื่อ</span>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control validation-input Number" name="age[]" id="age" placeholder="Age">
+                                    <span class="help-box">กรุณากรอกอายุ</span>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
+                <div class="mb-5 text-right">
+                    <button type="button" class="btn btn-success" id="Submit">Submit</button>
+                </div>
             </div>
+            <div class="col-4"></div>
         </div>
-        <div class="mb-5 text-right">
-                <button type="button" class="btn btn-success" id="Submit">Submit</button>
-            </div>
     </div>
 </body>
 </html>

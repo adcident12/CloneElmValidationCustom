@@ -55,6 +55,9 @@ function validationInput() {
         ValidationInputAll($(this).attr('id'));
     });
 }
+var ClassHelpBox = '.help-box';
+var ClassHelpBlockShow = 'help-block-show';
+var ClassValidationBorder = 'validation-border';
 
 function ValidationInputAll(attrId) {
     var status_return = true;
@@ -64,26 +67,26 @@ function ValidationInputAll(attrId) {
             if(elm.val() != '') {
                 if(elm.hasClass("String")) {
                     if(!validatelanguage(elm.val())) {
-                        elm.parent().find('.help-box').addClass('help-block-show');
-                        elm.addClass('validation-border');
+                        elm.parent().find(ClassHelpBox).addClass(ClassHelpBlockShow);
+                        elm.addClass(ClassValidationBorder);
                         status_return = false;
                     }else {
-                        elm.parent().find('.help-box').removeClass('help-block-show');
-                        elm.removeClass('validation-border');
+                        elm.parent().find(ClassHelpBox).removeClass(ClassHelpBlockShow);
+                        elm.removeClass(ClassValidationBorder);
                     }
                 }else if (elm.hasClass("Number")) {
                     if(!validateNumber(elm.val())) {
-                        elm.parent().find('.help-box').addClass('help-block-show');
-                        elm.addClass('validation-border');
+                        elm.parent().find(ClassHelpBox).addClass(ClassHelpBlockShow);
+                        elm.addClass(ClassValidationBorder);
                         status_return = false;
                     }else {
-                        elm.parent().find('.help-box').removeClass('help-block-show');
-                        elm.removeClass('validation-border');
+                        elm.parent().find(ClassHelpBox).removeClass(ClassHelpBlockShow);
+                        elm.removeClass(ClassValidationBorder);
                     }
                 }
             }else {
-                elm.parent().find('.help-box').addClass('help-block-show');
-                elm.addClass('validation-border');
+                elm.parent().find(ClassHelpBox).addClass(ClassHelpBlockShow);
+                elm.addClass(ClassValidationBorder);
                 status_return = false;
             }
         }
@@ -94,26 +97,26 @@ function ValidationInputAll(attrId) {
                 if($(this).val() != '') {
                     if($(this).hasClass("String")) {
                         if(!validatelanguage($(this).val())) {
-                            $(this).parent().find('.help-box').addClass('help-block-show');
-                            $(this).addClass('validation-border');
+                            $(this).parent().find(ClassHelpBox).addClass(ClassHelpBlockShow);
+                            $(this).addClass(ClassValidationBorder);
                             status_return = false;
                         }else {
-                            $(this).parent().find('.help-box').removeClass('help-block-show');
-                            $(this).removeClass('validation-border');
+                            $(this).parent().find(ClassHelpBox).removeClass(ClassHelpBlockShow);
+                            $(this).removeClass(ClassValidationBorder);
                         }
                     }else if ($(this).hasClass("Number")) {
                         if(!validateNumber($(this).val())) {
-                            $(this).parent().find('.help-box').addClass('help-block-show');
-                            $(this).addClass('validation-border');
+                            $(this).parent().find(ClassHelpBox).addClass(ClassHelpBlockShow);
+                            $(this).addClass(ClassValidationBorder);
                             status_return = false;
                         }else {
-                            $(this).parent().find('.help-box').removeClass('help-block-show');
-                            $(this).removeClass('validation-border');
+                            $(this).parent().find(ClassHelpBox).removeClass(ClassHelpBlockShow);
+                            $(this).removeClass(ClassValidationBorder);
                         }
                     }
                 }else {
-                    $(this).parent().find('.help-box').addClass('help-block-show');
-                    $(this).addClass('validation-border');
+                    $(this).parent().find(ClassHelpBox).addClass(ClassHelpBlockShow);
+                    $(this).addClass(ClassValidationBorder);
                     status_return = false;
                 }
             });
