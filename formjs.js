@@ -42,11 +42,11 @@ $(document).ready(function(){
                 arrResult[k] = Result;
             });
             ObjResult.Result = arrResult;
+            //เมื่อผ่านหมดแล้วนำ dataที่ได้บันทึกลง ฐานข้อมูล
+            console.log(ObjResult);
         }else {
             alert('โปรดกรอกข้อมูลให้ครบ');
         }
-        //เมื่อผ่านหมดแล้วนำ dataที่ได้บันทึกลง ฐานข้อมูล
-        console.log(ObjResult);
     });
 });
 
