@@ -1,0 +1,11 @@
+.help-box {
+    visibility: hidden;
+}
+.help-block-show {
+    visibility: visible;
+    color: red;
+}
+
+.validation-border {
+    border-color: red!important;
+}
