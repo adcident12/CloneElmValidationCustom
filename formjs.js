@@ -24,6 +24,14 @@ $(document).ready(function(){
         html += '</div>';
         $('#form').append(html);
         validationInput();
+        if(makeId >= 1) {
+            var btnhtml = "";
+                btnhtml += '<button type="button" class="btn btn-danger" id="RemoveList">RemoveList</button>';
+            $('.btn-remove').html(btnhtml);
+            removeElm();
+        }
+    });
+    $().click(function() {
     });
     $('#Submit').unbind('click');
     $('#Submit').click(function() {
@@ -49,6 +57,19 @@ $(document).ready(function(){
         }
     });
 });
+
+function removeElm() {
+    $('#RemoveList').unbind('click');
+    $('#RemoveList').click(function() {
+        var elmCheck = $('#form .clone-form');
+        if(elmCheck.length > 1) {
+            var elmlast = elmCheck.last();
+            elmlast.remove();
+        }else {
+            $("#RemoveList").prop('disabled', true);
+        }
+    });
+}
 
 function validationInput() {
     $(".validation-input").focusout(function(){

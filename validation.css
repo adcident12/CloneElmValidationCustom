@@ -9,3 +9,7 @@
 .validation-border {
     border-color: red!important;
 }
+
+.btn-inline {
+    display: inline-block;
+}
